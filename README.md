@@ -4,6 +4,12 @@ The project focuses on researching the LSTM Encoder-Decoder deep learning model,
 
 Climate change has significantly increased the frequency and intensity of extreme weather events such as heavy rainfall and storms, posing serious flood risks for Vietnam. Accurate water level forecasting is therefore vital for disaster preparedness and risk management. Traditional time series forecasting models like ARIMA often assume linearity, which limits their effectiveness in capturing complex hydrological dynamics. In contrast, deep learning models, particularly LSTM networks, are capable of learning non-linear relationships and temporal dependencies from data. This project investigates the use of an LSTM Encoder-Decoder architecture, inspired by sequence-to-sequence models in natural language processing, to forecast multi-step water levels at Le Thuy station using historical data on water levels, rainfall, and tides.
 
+## 🔄 Project Workflow
+
+The overall workflow of this project follows a 7-step machine learning lifecycle, as illustrated below:
+
+![Project Workflow](images/workflow.png)
+
 ### 🔍 Model Comparison: LSTM Encoder-Decoder vs Traditional LSTM
 
 | Metric | Traditional LSTM | LSTM Encoder-Decoder |
