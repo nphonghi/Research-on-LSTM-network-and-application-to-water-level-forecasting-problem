@@ -13,4 +13,26 @@ Climate change has significantly increased the frequency and intensity of extrem
 | RMSE   | 0.5508           | **0.2383**           |
 | R²     | 0.7072           | **0.9447**           |
 
+## 📊 Result Analysis: LSTM Encoder-Decoder vs Traditional LSTM
+
+The results clearly demonstrate the superior performance of the **LSTM Encoder-Decoder** model over the traditional **LSTM** model across all evaluation metrics:
+
+### 🔺 Forecast Errors
+
+- **Mean Squared Error (MSE)**: Decreased significantly from `0.3034` to `0.0568` (**-81.28%**).
+- **Mean Absolute Error (MAE)**: Reduced from `0.2985` to `0.1048` (**-64.89%**).
+- **Root Mean Squared Error (RMSE)**: Dropped from `0.5508` to `0.2383` (**-56.73%**).
+
+➡️ These improvements indicate that the average prediction error of the proposed Encoder-Decoder model is **approximately half** that of the traditional LSTM.
+
+### 📈 Model Fit (R² Score)
+
+- **Traditional LSTM**: R² = `0.7072` → explains 70.72% of the variance in the actual data.
+- **LSTM Encoder-Decoder**: R² = `0.9447` → explains 94.47% of the variance (**+33.58%** improvement).
+
+➡️ This substantial increase in R² shows that the Encoder-Decoder model not only fits the data better but also excels in capturing future trends.
+
+> ✅ **Conclusion**: The LSTM Encoder-Decoder architecture is significantly more accurate and reliable for multi-step water level forecasting, making it a powerful alternative to traditional LSTM-based models.
+
+
 As shown, the LSTM Encoder-Decoder model outperformed the traditional LSTM in all key metrics. Notably, the Encoder-Decoder approach demonstrated better generalization for multi-step forecasting, making it more suitable for predicting complex water level patterns under extreme weather conditions.
