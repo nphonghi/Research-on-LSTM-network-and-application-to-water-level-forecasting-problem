@@ -10,7 +10,15 @@ The overall workflow of this project follows a 7-step machine learning lifecycle
 
 ![Project Workflow](images/workflow.png)
 
-### 🔍 Model Comparison: LSTM Encoder-Decoder vs Traditional LSTM
+## 🧠 Model Architecture
+
+The figure below illustrates the full architecture of the LSTM Encoder-Decoder model used in this project. It includes the data preprocessing flow, how input mini-batches are constructed, and how they are passed through the Encoder and Decoder blocks.
+
+> 📌 **Tip**: You can zoom in on the image to see all mathematical notations and tensor dimensions in detail.
+
+![LSTM Encoder-Decoder Architecture](images/da1_model.png)
+
+## 🔍 Model Comparison: LSTM Encoder-Decoder vs Traditional LSTM
 
 | Metric | Traditional LSTM | LSTM Encoder-Decoder |
 |--------|------------------|----------------------|
