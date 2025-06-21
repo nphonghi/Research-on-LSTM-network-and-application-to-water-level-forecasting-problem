@@ -9,8 +9,8 @@ import tensorflow as tf
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, root_mean_squared_error, mean_absolute_percentage_error
 import matplotlib.pyplot as plt
 
-train_file = 'DataScaled/Train_WL_2020_2022.csv'
-test_file = 'DataScaled/Test_WL_2023.csv'
+train_file = 'data/DataScaled/Train_WL_2020_2022.csv'
+test_file = 'data/DataScaled/Test_WL_2023.csv'
 attributes = ['WL_KienGiang', 'WL_DongHoi','WL_LeThuy', 'RF_DongHoi', 'Tide_DongHoi', 'RF_KienGiang', 'RF_LeThuy']
 target_attribute = 'WL_LeThuy' 
 
@@ -95,7 +95,7 @@ print("\nĐánh giá mô hình trên tập Test:")
 y_test_true_np = y_test_true.numpy()
 
 # Reverse kết quả
-scaler = joblib.load('DataScaled/minmax_scaler2.pkl')
+scaler = joblib.load('data/DataScaled/minmax_scaler2.pkl')
 
 shape = y_pred_sequences_np.shape  
 y_pred_2d = y_pred_sequences_np.reshape(-1, shape[-1])  # [batch_size * timesteps, n_features]
@@ -141,7 +141,7 @@ for step in range(P):
 
 
 # --- Lưu mô hình ---
-model_save_path = 'Models/encoder_decoder_lstm_model_v2.keras'
+model_save_path = 'models/encoder_decoder_lstm_model_v2.keras'
 enc_dec_model.save(model_save_path)
 print(f"Mô hình đã được lưu tại: {model_save_path}")
 
@@ -155,7 +155,7 @@ plt.xlabel(f'Bước thời gian dự báo (t+1 đến t+{P})')
 plt.ylabel('Mực nước')
 plt.legend()
 plt.grid(True)
-plt.savefig("encoder_decoder_prediction_sample_v2.png")
+plt.savefig("src/Encoder_Decoder/Images/encoder_decoder_prediction_sample_v2.png")
 plt.show()
 
 # Tính giá trị trung bình theo từng bước dự báo cho toàn bộ mẫu
@@ -170,7 +170,7 @@ plt.xlabel(f'Bước thời gian dự báo (t+1 đến t+{P})')
 plt.ylabel('Mực nước')
 plt.legend()
 plt.grid(True)
-plt.savefig("average_all_samples.png")
+plt.savefig("src/Encoder_Decoder/Images/average_all_samples.png")
 plt.show()
 
 plt.figure(figsize=(14, 7))
@@ -182,7 +182,7 @@ plt.title(f'Giá trị thực và dự đoán cho toàn bộ {y_test_true_np.sha
 plt.xlabel(f'Bước thời gian dự báo (t+1 đến t+{P})')
 plt.ylabel('Mực nước')
 plt.grid(True)
-plt.savefig("overlay_all_samples.png")
+plt.savefig("src/Encoder_Decoder/Images/overlay_all_samples.png")
 plt.show()
 
 batch_size = 32
@@ -201,7 +201,7 @@ for i in range(batch_size):
 plt.tight_layout()
 plt.suptitle('Dự báo trên mini-batch 32 mẫu đầu tiên', fontsize=16, y=1.02)
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), ncol=2)
-plt.savefig("batch_32_predictions.png", bbox_inches='tight')
+plt.savefig("src/Encoder_Decoder/Images/batch_32_predictions.png", bbox_inches='tight')
 plt.show()
 
 # ĐỊNH NGHĨA METRICS 
@@ -230,7 +230,7 @@ for step in range(P):
 
 all_metrics_to_log = {**metrics_overall, **metrics_horizon}
 
-log_file = "model_eval_log_v2.txt"
+log_file = "src/Encoder_Decoder/model_eval_log_v2.txt"
 
 # Tạo buffer để lưu output từ model.summary()
 stream = io.StringIO()

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 # Đọc dữ liệu từ file và chuyển thành tập các chuỗi
-new_file = 'DataPre/Test_WL_2024.csv'
+new_file = 'data/DataPre/Test_WL_2024.csv'
 attributes = ['WL_KienGiang', 'RF_KienGiang', 'RF_LeThuy', 'WL_DongHoi', 'RF_DongHoi', 'Tide_DongHoi','WL_LeThuy']
 lead_time = 24
 predict_time = 12
@@ -18,7 +18,7 @@ X, y_real = format_data(new_file, attributes, lead_time, predict_time)
 X = X.reshape((X.shape[0], lead_time, len(attributes)))
 
 # Load model để dự báo
-model = load_model('Models/lstm_model.keras')
+model = load_model('models/lstm_model.keras')
 
 # Dự báo nhãn của X
 y_pred = model.predict(X)
@@ -36,7 +36,7 @@ metrics = evaluate(y_real, y_pred)
 print(metrics)
 
 # Lưu kết quả dự báo của mô hình
-log_file = "model_test_log.txt"
+log_file = "src/Traditional/model_test_log.txt"
 
 with open(log_file, 'a') as f:
     f.write(f"\nLead time: {lead_time}, Predict time: {predict_time}\n")
@@ -66,7 +66,7 @@ def plot_prediction(y_real, y_pred, timestamps=None, station_name="Le Thuy", pre
         plt.gcf().autofmt_xdate()
 
     plt.tight_layout()
-    plt.savefig("my_plot.png", dpi=300, bbox_inches='tight')
+    plt.savefig("src/Traditional/Images/my_plot.png", dpi=300, bbox_inches='tight')
     plt.close()
 
 plot_prediction(y_real, y_pred)

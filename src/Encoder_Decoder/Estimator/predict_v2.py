@@ -8,8 +8,8 @@ from src.Encoder_Decoder.PreprocessData.prepare_data import prepare_data
 from src.Encoder_Decoder.Model.model_v2 import EncoderDecoderModel, Encoder, Decoder 
 
 # --- Cấu hình ---
-new_data_file = 'DataScaled/Test_WL_2024.csv'
-model_load_path = 'Models/encoder_decoder_lstm_model_v2.keras'
+new_data_file = 'data/DataScaled/Test_WL_2024.csv'
+model_load_path = 'models/encoder_decoder_lstm_model_v2.keras'
 
 attributes = ['WL_KienGiang', 'WL_DongHoi', 'WL_LeThuy', 'RF_DongHoi', 'Tide_DongHoi', 'RF_KienGiang', 'RF_LeThuy']
 target_attribute = 'WL_LeThuy' 
@@ -65,7 +65,7 @@ except Exception as e:
 # --- Đánh giá kết quả ---
 y_true_new_data_np = y_true_new_data_tf.numpy()
 
-scaler = joblib.load('DataScaled/minmax_scaler2.pkl')
+scaler = joblib.load('data/DataScaled/minmax_scaler2.pkl')
 
 shape = y_pred_new_np.shape  
 y_pred_2d = y_pred_new_np.reshape(-1, shape[-1])  # [batch_size * timesteps, n_features]

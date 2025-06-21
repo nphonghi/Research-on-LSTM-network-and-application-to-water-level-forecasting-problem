@@ -36,9 +36,9 @@ def process_csv_for_scaling(input_path: str) -> pd.DataFrame:
     return df
 
 # Xử lý 3 tập
-train_df = process_csv_for_scaling('Data/Train_WL_2020_2022.csv')
-val_df   = process_csv_for_scaling('Data/Test_WL_2023.csv')
-test_df  = process_csv_for_scaling('Data/Test_WL_2024.csv')
+train_df = process_csv_for_scaling('data/DataRaw/Train_WL_2020_2022.csv')
+val_df   = process_csv_for_scaling('data/DataRaw/Test_WL_2023.csv')
+test_df  = process_csv_for_scaling('data/DataRaw/Test_WL_2024.csv')
 
 # Tiền xử lý dữ liệu
 scaler = MinMaxScaler()
@@ -47,7 +47,7 @@ val_scaled_values   = scaler.transform(val_df[value_columns])
 test_scaled_values  = scaler.transform(test_df[value_columns])
 
 # Lưu scaler để dùng sau
-joblib.dump(scaler, 'DataScaled/minmax_scaler.pkl')
+joblib.dump(scaler, 'data/DataScaled/minmax_scaler.pkl')
 
 # Scale riêng cho biến mục tiêu để reverse kết quả
 scaler2 = MinMaxScaler()
@@ -55,7 +55,7 @@ train_scaled_target = scaler2.fit_transform(train_df['WL_LeThuy'].values.reshape
 val_scaled_target   = scaler2.transform(val_df['WL_LeThuy'].values.reshape(-1, 1))
 test_scaled_target  = scaler2.transform(test_df['WL_LeThuy'].values.reshape(-1, 1))
 
-joblib.dump(scaler2, 'DataScaled/minmax_scaler2.pkl')
+joblib.dump(scaler2, 'data/DataScaled/minmax_scaler2.pkl')
 
 # Gộp lại với cột Time
 train_scaled_df = pd.concat([train_df[['Time']], pd.DataFrame(train_scaled_values, columns=value_columns)], axis=1)
@@ -63,7 +63,7 @@ val_scaled_df   = pd.concat([val_df[['Time']],   pd.DataFrame(val_scaled_values,
 test_scaled_df  = pd.concat([test_df[['Time']],  pd.DataFrame(test_scaled_values,  columns=value_columns)], axis=1)
 
 # Lưu kết quả ra CSV
-os.makedirs('DataScaled', exist_ok=True)
-train_scaled_df.to_csv('DataScaled/Train_WL_2020_2022.csv', index=False)
-val_scaled_df.to_csv('DataScaled/Test_WL_2023.csv', index=False)
-test_scaled_df.to_csv('DataScaled/Test_WL_2024.csv', index=False)
+os.makedirs('data/DataScaled', exist_ok=True)
+train_scaled_df.to_csv('data/DataScaled/Train_WL_2020_2022.csv', index=False)
+val_scaled_df.to_csv('data/DataScaled/Test_WL_2023.csv', index=False)
+test_scaled_df.to_csv('data/DataScaled/Test_WL_2024.csv', index=False)

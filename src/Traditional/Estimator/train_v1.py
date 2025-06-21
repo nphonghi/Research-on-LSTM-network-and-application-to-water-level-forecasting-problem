@@ -6,8 +6,8 @@ from src.Traditional.Model.model_v1 import Model
 # ==================================
 # Cấu hình
 # ==================================
-train_file = 'DataPre/Train_WL_2020_2022.csv'
-test_file = 'DataPre/Test_WL_2023.csv'
+train_file = 'data/DataPre/Train_WL_2020_2022.csv'
+test_file = 'data/DataPre/Test_WL_2023.csv'
 attributes = ['WL_KienGiang', 'RF_KienGiang', 'RF_LeThuy', 'WL_DongHoi', 'RF_DongHoi', 'Tide_DongHoi','WL_LeThuy']
 lead_time = 24
 predict_time = 12
@@ -41,12 +41,12 @@ print(metrics)
 # ==================================
 # Lưu mô hình
 # ==================================
-model.save('Models/lstm_model.keras')
+model.save('models/lstm_model.keras')
 
 # ==================================
 # Ghi lại mô hình để lấy dữ liệu so sánh
 # ==================================
-log_file = "model_eval_log.txt"
+log_file = "src/Traditional/model_eval_log.txt"
 
 # Tạo buffer để lưu output từ model.summary()
 stream = io.StringIO()

@@ -33,6 +33,6 @@ def process_and_save_csv(input_path, output_path, time_col='Time'):
     # Lưu lại file CSV mới
     df.to_csv(output_path, index=False)
 
-process_and_save_csv('Data/Train_WL_2020_2022.csv', 'DataPre/Train_WL_2020_2022.csv')
-process_and_save_csv('Data/Test_WL_2023.csv', 'DataPre/Test_WL_2023.csv')
-process_and_save_csv('Data/Test_WL_2024.csv', 'DataPre/Test_WL_2024.csv')
+process_and_save_csv('data/DataRaw/Train_WL_2020_2022.csv', 'data/DataPre/Train_WL_2020_2022.csv')
+process_and_save_csv('data/DataRaw/Test_WL_2023.csv', 'data/DataPre/Test_WL_2023.csv')
+process_and_save_csv('data/DataRaw/Test_WL_2024.csv', 'data/DataPre/Test_WL_2024.csv')
