@@ -1,0 +1,1079 @@
+
+===== Model Evaluation Log - 2025-05-23 22:26:14.225603 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         84,480 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         83,009 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4581, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 502,664 (1.92 MB)
+ Trainable params: 167,554 (654.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 335,110 (1.28 MB)
+
+----- Configuration -----
+Lead time (T): 72
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 3
+Teacher Forcing during training: True
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0274
+Overall RMSE: 0.1656
+Overall MAE: 0.0872
+Overall R2 Score: 0.9060
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0222
+Horizon t+1 RMSE: 0.1489
+Horizon t+1 MAE: 0.0811
+Horizon t+1 R2 Score: 0.9242
+Horizon t+2 MSE: 0.0211
+Horizon t+2 RMSE: 0.1453
+Horizon t+2 MAE: 0.0780
+Horizon t+2 R2 Score: 0.9278
+Horizon t+3 MSE: 0.0211
+Horizon t+3 RMSE: 0.1453
+Horizon t+3 MAE: 0.0775
+Horizon t+3 R2 Score: 0.9278
+Horizon t+4 MSE: 0.0218
+Horizon t+4 RMSE: 0.1478
+Horizon t+4 MAE: 0.0787
+Horizon t+4 R2 Score: 0.9253
+Horizon t+5 MSE: 0.0230
+Horizon t+5 RMSE: 0.1515
+Horizon t+5 MAE: 0.0806
+Horizon t+5 R2 Score: 0.9214
+Horizon t+6 MSE: 0.0244
+Horizon t+6 RMSE: 0.1561
+Horizon t+6 MAE: 0.0830
+Horizon t+6 R2 Score: 0.9166
+Horizon t+7 MSE: 0.0261
+Horizon t+7 RMSE: 0.1616
+Horizon t+7 MAE: 0.0858
+Horizon t+7 R2 Score: 0.9105
+Horizon t+8 MSE: 0.0283
+Horizon t+8 RMSE: 0.1681
+Horizon t+8 MAE: 0.0886
+Horizon t+8 R2 Score: 0.9031
+Horizon t+9 MSE: 0.0308
+Horizon t+9 RMSE: 0.1756
+Horizon t+9 MAE: 0.0918
+Horizon t+9 R2 Score: 0.8943
+Horizon t+10 MSE: 0.0337
+Horizon t+10 RMSE: 0.1835
+Horizon t+10 MAE: 0.0957
+Horizon t+10 R2 Score: 0.8844
+Horizon t+11 MSE: 0.0367
+Horizon t+11 RMSE: 0.1917
+Horizon t+11 MAE: 0.1004
+Horizon t+11 R2 Score: 0.8738
+Horizon t+12 MSE: 0.0400
+Horizon t+12 RMSE: 0.2001
+Horizon t+12 MAE: 0.1057
+Horizon t+12 R2 Score: 0.8624
+================================================================================
+
+===== Model Evaluation Log - 2025-05-23 23:06:29.964206 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         84,480 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         83,009 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4581, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 502,664 (1.92 MB)
+ Trainable params: 167,554 (654.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 335,110 (1.28 MB)
+
+----- Configuration -----
+Lead time (T): 72
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0135
+Overall RMSE: 0.1162
+Overall MAE: 0.0659
+Overall R2 Score: 0.9537
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0103
+Horizon t+1 RMSE: 0.1016
+Horizon t+1 MAE: 0.0596
+Horizon t+1 R2 Score: 0.9647
+Horizon t+2 MSE: 0.0096
+Horizon t+2 RMSE: 0.0982
+Horizon t+2 MAE: 0.0568
+Horizon t+2 R2 Score: 0.9671
+Horizon t+3 MSE: 0.0093
+Horizon t+3 RMSE: 0.0965
+Horizon t+3 MAE: 0.0549
+Horizon t+3 R2 Score: 0.9682
+Horizon t+4 MSE: 0.0093
+Horizon t+4 RMSE: 0.0962
+Horizon t+4 MAE: 0.0544
+Horizon t+4 R2 Score: 0.9683
+Horizon t+5 MSE: 0.0095
+Horizon t+5 RMSE: 0.0973
+Horizon t+5 MAE: 0.0553
+Horizon t+5 R2 Score: 0.9676
+Horizon t+6 MSE: 0.0101
+Horizon t+6 RMSE: 0.1003
+Horizon t+6 MAE: 0.0576
+Horizon t+6 R2 Score: 0.9656
+Horizon t+7 MSE: 0.0112
+Horizon t+7 RMSE: 0.1056
+Horizon t+7 MAE: 0.0611
+Horizon t+7 R2 Score: 0.9618
+Horizon t+8 MSE: 0.0129
+Horizon t+8 RMSE: 0.1135
+Horizon t+8 MAE: 0.0659
+Horizon t+8 R2 Score: 0.9558
+Horizon t+9 MSE: 0.0153
+Horizon t+9 RMSE: 0.1236
+Horizon t+9 MAE: 0.0714
+Horizon t+9 R2 Score: 0.9476
+Horizon t+10 MSE: 0.0182
+Horizon t+10 RMSE: 0.1349
+Horizon t+10 MAE: 0.0778
+Horizon t+10 R2 Score: 0.9375
+Horizon t+11 MSE: 0.0215
+Horizon t+11 RMSE: 0.1466
+Horizon t+11 MAE: 0.0846
+Horizon t+11 R2 Score: 0.9262
+Horizon t+12 MSE: 0.0251
+Horizon t+12 RMSE: 0.1584
+Horizon t+12 MAE: 0.0916
+Horizon t+12 R2 Score: 0.9138
+================================================================================
+
+===== Model Evaluation Log - 2025-05-24 01:43:32.791999 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         83,456 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         83,009 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4581, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 499,592 (1.91 MB)
+ Trainable params: 166,530 (650.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 333,062 (1.27 MB)
+
+----- Configuration -----
+Lead time (T): 72
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0006
+Overall RMSE: 0.0243
+Overall MAE: 0.0113
+Overall R2 Score: 0.9502
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0002
+Horizon t+1 RMSE: 0.0150
+Horizon t+1 MAE: 0.0081
+Horizon t+1 R2 Score: 0.9811
+Horizon t+2 MSE: 0.0002
+Horizon t+2 RMSE: 0.0150
+Horizon t+2 MAE: 0.0080
+Horizon t+2 R2 Score: 0.9810
+Horizon t+3 MSE: 0.0002
+Horizon t+3 RMSE: 0.0157
+Horizon t+3 MAE: 0.0081
+Horizon t+3 R2 Score: 0.9791
+Horizon t+4 MSE: 0.0003
+Horizon t+4 RMSE: 0.0172
+Horizon t+4 MAE: 0.0085
+Horizon t+4 R2 Score: 0.9749
+Horizon t+5 MSE: 0.0004
+Horizon t+5 RMSE: 0.0193
+Horizon t+5 MAE: 0.0093
+Horizon t+5 R2 Score: 0.9684
+Horizon t+6 MSE: 0.0005
+Horizon t+6 RMSE: 0.0218
+Horizon t+6 MAE: 0.0102
+Horizon t+6 R2 Score: 0.9599
+Horizon t+7 MSE: 0.0006
+Horizon t+7 RMSE: 0.0242
+Horizon t+7 MAE: 0.0112
+Horizon t+7 R2 Score: 0.9502
+Horizon t+8 MSE: 0.0007
+Horizon t+8 RMSE: 0.0266
+Horizon t+8 MAE: 0.0123
+Horizon t+8 R2 Score: 0.9402
+Horizon t+9 MSE: 0.0008
+Horizon t+9 RMSE: 0.0287
+Horizon t+9 MAE: 0.0134
+Horizon t+9 R2 Score: 0.9303
+Horizon t+10 MSE: 0.0009
+Horizon t+10 RMSE: 0.0305
+Horizon t+10 MAE: 0.0145
+Horizon t+10 R2 Score: 0.9209
+Horizon t+11 MSE: 0.0010
+Horizon t+11 RMSE: 0.0322
+Horizon t+11 MAE: 0.0155
+Horizon t+11 R2 Score: 0.9121
+Horizon t+12 MSE: 0.0011
+Horizon t+12 RMSE: 0.0337
+Horizon t+12 MAE: 0.0165
+Horizon t+12 R2 Score: 0.9035
+================================================================================
+
+===== Model Evaluation Log - 2025-05-24 03:01:03.675956 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         83,456 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         83,009 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4581, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 499,592 (1.91 MB)
+ Trainable params: 166,530 (650.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 333,062 (1.27 MB)
+
+----- Configuration -----
+Lead time (T): 72
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0159
+Overall RMSE: 0.1261
+Overall MAE: 0.0682
+Overall R2 Score: 0.9455
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0058
+Horizon t+1 RMSE: 0.0764
+Horizon t+1 MAE: 0.0403
+Horizon t+1 R2 Score: 0.9801
+Horizon t+2 MSE: 0.0058
+Horizon t+2 RMSE: 0.0764
+Horizon t+2 MAE: 0.0418
+Horizon t+2 R2 Score: 0.9800
+Horizon t+3 MSE: 0.0064
+Horizon t+3 RMSE: 0.0799
+Horizon t+3 MAE: 0.0443
+Horizon t+3 R2 Score: 0.9782
+Horizon t+4 MSE: 0.0077
+Horizon t+4 RMSE: 0.0880
+Horizon t+4 MAE: 0.0485
+Horizon t+4 R2 Score: 0.9735
+Horizon t+5 MSE: 0.0099
+Horizon t+5 RMSE: 0.0996
+Horizon t+5 MAE: 0.0543
+Horizon t+5 R2 Score: 0.9660
+Horizon t+6 MSE: 0.0127
+Horizon t+6 RMSE: 0.1129
+Horizon t+6 MAE: 0.0614
+Horizon t+6 R2 Score: 0.9563
+Horizon t+7 MSE: 0.0159
+Horizon t+7 RMSE: 0.1263
+Horizon t+7 MAE: 0.0691
+Horizon t+7 R2 Score: 0.9454
+Horizon t+8 MSE: 0.0192
+Horizon t+8 RMSE: 0.1387
+Horizon t+8 MAE: 0.0768
+Horizon t+8 R2 Score: 0.9340
+Horizon t+9 MSE: 0.0224
+Horizon t+9 RMSE: 0.1498
+Horizon t+9 MAE: 0.0846
+Horizon t+9 R2 Score: 0.9230
+Horizon t+10 MSE: 0.0254
+Horizon t+10 RMSE: 0.1595
+Horizon t+10 MAE: 0.0921
+Horizon t+10 R2 Score: 0.9126
+Horizon t+11 MSE: 0.0283
+Horizon t+11 RMSE: 0.1682
+Horizon t+11 MAE: 0.0992
+Horizon t+11 R2 Score: 0.9028
+Horizon t+12 MSE: 0.0310
+Horizon t+12 RMSE: 0.1760
+Horizon t+12 MAE: 0.1060
+Horizon t+12 R2 Score: 0.8935
+================================================================================
+
+===== Model Evaluation Log - 2025-06-06 19:55:47.991517 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         84,480 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         83,009 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4581, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 502,664 (1.92 MB)
+ Trainable params: 167,554 (654.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 335,110 (1.28 MB)
+
+----- Configuration -----
+Lead time (T): 72
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0124
+Overall RMSE: 0.1116
+Overall MAE: 0.0746
+Overall R2 Score: 0.9573
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0074
+Horizon t+1 RMSE: 0.0858
+Horizon t+1 MAE: 0.0601
+Horizon t+1 R2 Score: 0.9749
+Horizon t+2 MSE: 0.0078
+Horizon t+2 RMSE: 0.0884
+Horizon t+2 MAE: 0.0643
+Horizon t+2 R2 Score: 0.9733
+Horizon t+3 MSE: 0.0079
+Horizon t+3 RMSE: 0.0889
+Horizon t+3 MAE: 0.0644
+Horizon t+3 R2 Score: 0.9730
+Horizon t+4 MSE: 0.0082
+Horizon t+4 RMSE: 0.0904
+Horizon t+4 MAE: 0.0644
+Horizon t+4 R2 Score: 0.9720
+Horizon t+5 MSE: 0.0088
+Horizon t+5 RMSE: 0.0940
+Horizon t+5 MAE: 0.0659
+Horizon t+5 R2 Score: 0.9698
+Horizon t+6 MSE: 0.0099
+Horizon t+6 RMSE: 0.0997
+Horizon t+6 MAE: 0.0689
+Horizon t+6 R2 Score: 0.9660
+Horizon t+7 MSE: 0.0114
+Horizon t+7 RMSE: 0.1069
+Horizon t+7 MAE: 0.0728
+Horizon t+7 R2 Score: 0.9609
+Horizon t+8 MSE: 0.0132
+Horizon t+8 RMSE: 0.1150
+Horizon t+8 MAE: 0.0773
+Horizon t+8 R2 Score: 0.9547
+Horizon t+9 MSE: 0.0153
+Horizon t+9 RMSE: 0.1236
+Horizon t+9 MAE: 0.0821
+Horizon t+9 R2 Score: 0.9476
+Horizon t+10 MSE: 0.0175
+Horizon t+10 RMSE: 0.1322
+Horizon t+10 MAE: 0.0869
+Horizon t+10 R2 Score: 0.9400
+Horizon t+11 MSE: 0.0198
+Horizon t+11 RMSE: 0.1407
+Horizon t+11 MAE: 0.0917
+Horizon t+11 R2 Score: 0.9321
+Horizon t+12 MSE: 0.0222
+Horizon t+12 RMSE: 0.1490
+Horizon t+12 MAE: 0.0963
+Horizon t+12 R2 Score: 0.9237
+================================================================================
+
+===== Model Evaluation Log - 2025-06-06 20:23:40.380659 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         84,480 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         83,009 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4629, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 502,664 (1.92 MB)
+ Trainable params: 167,554 (654.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 335,110 (1.28 MB)
+
+----- Configuration -----
+Lead time (T): 24
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0099
+Overall RMSE: 0.0997
+Overall MAE: 0.0525
+Overall R2 Score: 0.9661
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0046
+Horizon t+1 RMSE: 0.0682
+Horizon t+1 MAE: 0.0358
+Horizon t+1 R2 Score: 0.9842
+Horizon t+2 MSE: 0.0047
+Horizon t+2 RMSE: 0.0683
+Horizon t+2 MAE: 0.0366
+Horizon t+2 R2 Score: 0.9841
+Horizon t+3 MSE: 0.0050
+Horizon t+3 RMSE: 0.0709
+Horizon t+3 MAE: 0.0393
+Horizon t+3 R2 Score: 0.9829
+Horizon t+4 MSE: 0.0056
+Horizon t+4 RMSE: 0.0751
+Horizon t+4 MAE: 0.0429
+Horizon t+4 R2 Score: 0.9807
+Horizon t+5 MSE: 0.0065
+Horizon t+5 RMSE: 0.0807
+Horizon t+5 MAE: 0.0470
+Horizon t+5 R2 Score: 0.9778
+Horizon t+6 MSE: 0.0077
+Horizon t+6 RMSE: 0.0876
+Horizon t+6 MAE: 0.0512
+Horizon t+6 R2 Score: 0.9738
+Horizon t+7 MSE: 0.0091
+Horizon t+7 RMSE: 0.0956
+Horizon t+7 MAE: 0.0551
+Horizon t+7 R2 Score: 0.9688
+Horizon t+8 MSE: 0.0109
+Horizon t+8 RMSE: 0.1043
+Horizon t+8 MAE: 0.0586
+Horizon t+8 R2 Score: 0.9628
+Horizon t+9 MSE: 0.0129
+Horizon t+9 RMSE: 0.1135
+Horizon t+9 MAE: 0.0618
+Horizon t+9 R2 Score: 0.9559
+Horizon t+10 MSE: 0.0151
+Horizon t+10 RMSE: 0.1227
+Horizon t+10 MAE: 0.0646
+Horizon t+10 R2 Score: 0.9485
+Horizon t+11 MSE: 0.0174
+Horizon t+11 RMSE: 0.1317
+Horizon t+11 MAE: 0.0673
+Horizon t+11 R2 Score: 0.9406
+Horizon t+12 MSE: 0.0198
+Horizon t+12 RMSE: 0.1406
+Horizon t+12 MAE: 0.0701
+Horizon t+12 R2 Score: 0.9323
+================================================================================
+
+===== Model Evaluation Log - 2025-06-06 20:27:45.452178 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         84,480 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         83,009 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4605, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 502,664 (1.92 MB)
+ Trainable params: 167,554 (654.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 335,110 (1.28 MB)
+
+----- Configuration -----
+Lead time (T): 48
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0121
+Overall RMSE: 0.1098
+Overall MAE: 0.0719
+Overall R2 Score: 0.9588
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0049
+Horizon t+1 RMSE: 0.0702
+Horizon t+1 MAE: 0.0402
+Horizon t+1 R2 Score: 0.9832
+Horizon t+2 MSE: 0.0053
+Horizon t+2 RMSE: 0.0725
+Horizon t+2 MAE: 0.0449
+Horizon t+2 R2 Score: 0.9821
+Horizon t+3 MSE: 0.0059
+Horizon t+3 RMSE: 0.0768
+Horizon t+3 MAE: 0.0500
+Horizon t+3 R2 Score: 0.9799
+Horizon t+4 MSE: 0.0068
+Horizon t+4 RMSE: 0.0823
+Horizon t+4 MAE: 0.0552
+Horizon t+4 R2 Score: 0.9769
+Horizon t+5 MSE: 0.0079
+Horizon t+5 RMSE: 0.0890
+Horizon t+5 MAE: 0.0606
+Horizon t+5 R2 Score: 0.9730
+Horizon t+6 MSE: 0.0094
+Horizon t+6 RMSE: 0.0968
+Horizon t+6 MAE: 0.0664
+Horizon t+6 R2 Score: 0.9680
+Horizon t+7 MSE: 0.0112
+Horizon t+7 RMSE: 0.1056
+Horizon t+7 MAE: 0.0725
+Horizon t+7 R2 Score: 0.9619
+Horizon t+8 MSE: 0.0133
+Horizon t+8 RMSE: 0.1153
+Horizon t+8 MAE: 0.0792
+Horizon t+8 R2 Score: 0.9545
+Horizon t+9 MSE: 0.0158
+Horizon t+9 RMSE: 0.1256
+Horizon t+9 MAE: 0.0865
+Horizon t+9 R2 Score: 0.9460
+Horizon t+10 MSE: 0.0185
+Horizon t+10 RMSE: 0.1360
+Horizon t+10 MAE: 0.0943
+Horizon t+10 R2 Score: 0.9367
+Horizon t+11 MSE: 0.0214
+Horizon t+11 RMSE: 0.1463
+Horizon t+11 MAE: 0.1024
+Horizon t+11 R2 Score: 0.9267
+Horizon t+12 MSE: 0.0244
+Horizon t+12 RMSE: 0.1562
+Horizon t+12 MAE: 0.1104
+Horizon t+12 R2 Score: 0.9164
+================================================================================
+
+===== Model Evaluation Log - 2025-06-06 20:30:49.988079 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         21,760 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         21,025 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4629, 1, 1)                  │             33 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 128,456 (501.79 KB)
+ Trainable params: 42,818 (167.26 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 85,638 (334.53 KB)
+
+----- Configuration -----
+Lead time (T): 24
+Predict time (P): 12
+LSTM Units: 32
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0117
+Overall RMSE: 0.1083
+Overall MAE: 0.0646
+Overall R2 Score: 0.9599
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0075
+Horizon t+1 RMSE: 0.0865
+Horizon t+1 MAE: 0.0576
+Horizon t+1 R2 Score: 0.9745
+Horizon t+2 MSE: 0.0084
+Horizon t+2 RMSE: 0.0918
+Horizon t+2 MAE: 0.0651
+Horizon t+2 R2 Score: 0.9712
+Horizon t+3 MSE: 0.0083
+Horizon t+3 RMSE: 0.0909
+Horizon t+3 MAE: 0.0631
+Horizon t+3 R2 Score: 0.9718
+Horizon t+4 MSE: 0.0079
+Horizon t+4 RMSE: 0.0891
+Horizon t+4 MAE: 0.0590
+Horizon t+4 R2 Score: 0.9729
+Horizon t+5 MSE: 0.0080
+Horizon t+5 RMSE: 0.0895
+Horizon t+5 MAE: 0.0564
+Horizon t+5 R2 Score: 0.9727
+Horizon t+6 MSE: 0.0087
+Horizon t+6 RMSE: 0.0931
+Horizon t+6 MAE: 0.0562
+Horizon t+6 R2 Score: 0.9704
+Horizon t+7 MSE: 0.0099
+Horizon t+7 RMSE: 0.0994
+Horizon t+7 MAE: 0.0578
+Horizon t+7 R2 Score: 0.9662
+Horizon t+8 MSE: 0.0116
+Horizon t+8 RMSE: 0.1078
+Horizon t+8 MAE: 0.0611
+Horizon t+8 R2 Score: 0.9603
+Horizon t+9 MSE: 0.0138
+Horizon t+9 RMSE: 0.1173
+Horizon t+9 MAE: 0.0658
+Horizon t+9 R2 Score: 0.9529
+Horizon t+10 MSE: 0.0162
+Horizon t+10 RMSE: 0.1272
+Horizon t+10 MAE: 0.0714
+Horizon t+10 R2 Score: 0.9446
+Horizon t+11 MSE: 0.0188
+Horizon t+11 RMSE: 0.1371
+Horizon t+11 MAE: 0.0777
+Horizon t+11 R2 Score: 0.9356
+Horizon t+12 MSE: 0.0216
+Horizon t+12 RMSE: 0.1471
+Horizon t+12 MAE: 0.0845
+Horizon t+12 R2 Score: 0.9260
+================================================================================
+
+===== Model Evaluation Log - 2025-06-06 20:37:43.904980 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │        332,800 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │        329,857 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4629, 1, 1)                  │            129 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 1,988,360 (7.58 MB)
+ Trainable params: 662,786 (2.53 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 1,325,574 (5.06 MB)
+
+----- Configuration -----
+Lead time (T): 24
+Predict time (P): 12
+LSTM Units: 128
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0101
+Overall RMSE: 0.1006
+Overall MAE: 0.0598
+Overall R2 Score: 0.9654
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0034
+Horizon t+1 RMSE: 0.0581
+Horizon t+1 MAE: 0.0319
+Horizon t+1 R2 Score: 0.9885
+Horizon t+2 MSE: 0.0036
+Horizon t+2 RMSE: 0.0598
+Horizon t+2 MAE: 0.0330
+Horizon t+2 R2 Score: 0.9878
+Horizon t+3 MSE: 0.0041
+Horizon t+3 RMSE: 0.0642
+Horizon t+3 MAE: 0.0367
+Horizon t+3 R2 Score: 0.9859
+Horizon t+4 MSE: 0.0050
+Horizon t+4 RMSE: 0.0706
+Horizon t+4 MAE: 0.0419
+Horizon t+4 R2 Score: 0.9830
+Horizon t+5 MSE: 0.0061
+Horizon t+5 RMSE: 0.0783
+Horizon t+5 MAE: 0.0478
+Horizon t+5 R2 Score: 0.9791
+Horizon t+6 MSE: 0.0076
+Horizon t+6 RMSE: 0.0871
+Horizon t+6 MAE: 0.0540
+Horizon t+6 R2 Score: 0.9741
+Horizon t+7 MSE: 0.0094
+Horizon t+7 RMSE: 0.0968
+Horizon t+7 MAE: 0.0606
+Horizon t+7 R2 Score: 0.9680
+Horizon t+8 MSE: 0.0115
+Horizon t+8 RMSE: 0.1071
+Horizon t+8 MAE: 0.0676
+Horizon t+8 R2 Score: 0.9608
+Horizon t+9 MSE: 0.0139
+Horizon t+9 RMSE: 0.1177
+Horizon t+9 MAE: 0.0747
+Horizon t+9 R2 Score: 0.9526
+Horizon t+10 MSE: 0.0164
+Horizon t+10 RMSE: 0.1280
+Horizon t+10 MAE: 0.0821
+Horizon t+10 R2 Score: 0.9439
+Horizon t+11 MSE: 0.0190
+Horizon t+11 RMSE: 0.1378
+Horizon t+11 MAE: 0.0898
+Horizon t+11 R2 Score: 0.9350
+Horizon t+12 MSE: 0.0216
+Horizon t+12 RMSE: 0.1470
+Horizon t+12 MAE: 0.0972
+Horizon t+12 R2 Score: 0.9260
+================================================================================
+
+===== Model Evaluation Log - 2025-06-06 20:40:22.002480 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         18,432 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         16,961 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4629, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 106,376 (415.54 KB)
+ Trainable params: 35,458 (138.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 70,918 (277.03 KB)
+
+----- Configuration -----
+Lead time (T): 24
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 1
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0109
+Overall RMSE: 0.1045
+Overall MAE: 0.0629
+Overall R2 Score: 0.9627
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0046
+Horizon t+1 RMSE: 0.0676
+Horizon t+1 MAE: 0.0422
+Horizon t+1 R2 Score: 0.9844
+Horizon t+2 MSE: 0.0049
+Horizon t+2 RMSE: 0.0698
+Horizon t+2 MAE: 0.0433
+Horizon t+2 R2 Score: 0.9834
+Horizon t+3 MSE: 0.0054
+Horizon t+3 RMSE: 0.0738
+Horizon t+3 MAE: 0.0453
+Horizon t+3 R2 Score: 0.9814
+Horizon t+4 MSE: 0.0062
+Horizon t+4 RMSE: 0.0786
+Horizon t+4 MAE: 0.0479
+Horizon t+4 R2 Score: 0.9789
+Horizon t+5 MSE: 0.0071
+Horizon t+5 RMSE: 0.0845
+Horizon t+5 MAE: 0.0512
+Horizon t+5 R2 Score: 0.9756
+Horizon t+6 MSE: 0.0084
+Horizon t+6 RMSE: 0.0915
+Horizon t+6 MAE: 0.0556
+Horizon t+6 R2 Score: 0.9714
+Horizon t+7 MSE: 0.0100
+Horizon t+7 RMSE: 0.0998
+Horizon t+7 MAE: 0.0610
+Horizon t+7 R2 Score: 0.9660
+Horizon t+8 MSE: 0.0119
+Horizon t+8 RMSE: 0.1090
+Horizon t+8 MAE: 0.0673
+Horizon t+8 R2 Score: 0.9594
+Horizon t+9 MSE: 0.0142
+Horizon t+9 RMSE: 0.1190
+Horizon t+9 MAE: 0.0740
+Horizon t+9 R2 Score: 0.9516
+Horizon t+10 MSE: 0.0167
+Horizon t+10 RMSE: 0.1292
+Horizon t+10 MAE: 0.0814
+Horizon t+10 R2 Score: 0.9429
+Horizon t+11 MSE: 0.0195
+Horizon t+11 RMSE: 0.1395
+Horizon t+11 MAE: 0.0891
+Horizon t+11 R2 Score: 0.9334
+Horizon t+12 MSE: 0.0224
+Horizon t+12 RMSE: 0.1497
+Horizon t+12 MAE: 0.0969
+Horizon t+12 R2 Score: 0.9233
+================================================================================
+
+===== Model Evaluation Log - 2025-06-06 20:47:10.614039 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         51,456 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         49,985 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4629, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 304,520 (1.16 MB)
+ Trainable params: 101,506 (396.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 203,014 (793.03 KB)
+
+----- Configuration -----
+Lead time (T): 24
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 2
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0103
+Overall RMSE: 0.1016
+Overall MAE: 0.0564
+Overall R2 Score: 0.9647
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0032
+Horizon t+1 RMSE: 0.0569
+Horizon t+1 MAE: 0.0330
+Horizon t+1 R2 Score: 0.9889
+Horizon t+2 MSE: 0.0038
+Horizon t+2 RMSE: 0.0615
+Horizon t+2 MAE: 0.0364
+Horizon t+2 R2 Score: 0.9871
+Horizon t+3 MSE: 0.0046
+Horizon t+3 RMSE: 0.0677
+Horizon t+3 MAE: 0.0409
+Horizon t+3 R2 Score: 0.9844
+Horizon t+4 MSE: 0.0056
+Horizon t+4 RMSE: 0.0751
+Horizon t+4 MAE: 0.0462
+Horizon t+4 R2 Score: 0.9807
+Horizon t+5 MSE: 0.0069
+Horizon t+5 RMSE: 0.0829
+Horizon t+5 MAE: 0.0513
+Horizon t+5 R2 Score: 0.9765
+Horizon t+6 MSE: 0.0083
+Horizon t+6 RMSE: 0.0910
+Horizon t+6 MAE: 0.0558
+Horizon t+6 R2 Score: 0.9717
+Horizon t+7 MSE: 0.0098
+Horizon t+7 RMSE: 0.0992
+Horizon t+7 MAE: 0.0597
+Horizon t+7 R2 Score: 0.9664
+Horizon t+8 MSE: 0.0117
+Horizon t+8 RMSE: 0.1080
+Horizon t+8 MAE: 0.0631
+Horizon t+8 R2 Score: 0.9602
+Horizon t+9 MSE: 0.0138
+Horizon t+9 RMSE: 0.1173
+Horizon t+9 MAE: 0.0665
+Horizon t+9 R2 Score: 0.9529
+Horizon t+10 MSE: 0.0161
+Horizon t+10 RMSE: 0.1269
+Horizon t+10 MAE: 0.0701
+Horizon t+10 R2 Score: 0.9449
+Horizon t+11 MSE: 0.0187
+Horizon t+11 RMSE: 0.1366
+Horizon t+11 MAE: 0.0742
+Horizon t+11 R2 Score: 0.9362
+Horizon t+12 MSE: 0.0214
+Horizon t+12 RMSE: 0.1463
+Horizon t+12 MAE: 0.0789
+Horizon t+12 R2 Score: 0.9267
+================================================================================
+
+===== Model Evaluation Log - 2025-06-06 20:53:41.840692 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         84,480 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         83,009 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4629, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 502,664 (1.92 MB)
+ Trainable params: 167,554 (654.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 335,110 (1.28 MB)
+
+----- Configuration -----
+Lead time (T): 24
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0117
+Overall RMSE: 0.1081
+Overall MAE: 0.0629
+Overall R2 Score: 0.9601
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0064
+Horizon t+1 RMSE: 0.0799
+Horizon t+1 MAE: 0.0470
+Horizon t+1 R2 Score: 0.9782
+Horizon t+2 MSE: 0.0065
+Horizon t+2 RMSE: 0.0809
+Horizon t+2 MAE: 0.0504
+Horizon t+2 R2 Score: 0.9777
+Horizon t+3 MSE: 0.0066
+Horizon t+3 RMSE: 0.0812
+Horizon t+3 MAE: 0.0494
+Horizon t+3 R2 Score: 0.9775
+Horizon t+4 MSE: 0.0069
+Horizon t+4 RMSE: 0.0830
+Horizon t+4 MAE: 0.0488
+Horizon t+4 R2 Score: 0.9765
+Horizon t+5 MSE: 0.0076
+Horizon t+5 RMSE: 0.0872
+Horizon t+5 MAE: 0.0503
+Horizon t+5 R2 Score: 0.9741
+Horizon t+6 MSE: 0.0088
+Horizon t+6 RMSE: 0.0936
+Horizon t+6 MAE: 0.0538
+Horizon t+6 R2 Score: 0.9700
+Horizon t+7 MSE: 0.0104
+Horizon t+7 RMSE: 0.1020
+Horizon t+7 MAE: 0.0591
+Horizon t+7 R2 Score: 0.9644
+Horizon t+8 MSE: 0.0125
+Horizon t+8 RMSE: 0.1117
+Horizon t+8 MAE: 0.0658
+Horizon t+8 R2 Score: 0.9573
+Horizon t+9 MSE: 0.0149
+Horizon t+9 RMSE: 0.1221
+Horizon t+9 MAE: 0.0733
+Horizon t+9 R2 Score: 0.9490
+Horizon t+10 MSE: 0.0174
+Horizon t+10 RMSE: 0.1320
+Horizon t+10 MAE: 0.0804
+Horizon t+10 R2 Score: 0.9403
+Horizon t+11 MSE: 0.0199
+Horizon t+11 RMSE: 0.1411
+Horizon t+11 MAE: 0.0862
+Horizon t+11 R2 Score: 0.9319
+Horizon t+12 MSE: 0.0223
+Horizon t+12 RMSE: 0.1492
+Horizon t+12 MAE: 0.0899
+Horizon t+12 R2 Score: 0.9238
+================================================================================
+
+===== Model Evaluation Log - 2025-06-06 21:23:10.039889 =====
+
+----- Model Architecture -----
+Model: "encoder_decoder_model"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Layer (type)                          ┃ Output Shape                  ┃        Param # ┃ Traina… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ encoder (Encoder)                     │ ?                             │         84,480 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ decoder (Decoder)                     │ ?                             │         83,009 │    Y    │
+├───────────────────────────────────────┼───────────────────────────────┼────────────────┼─────────┤
+│ encoder_transformer (Dense)           │ (4629, 1, 1)                  │             65 │    Y    │
+└───────────────────────────────────────┴───────────────────────────────┴────────────────┴─────────┘
+ Total params: 502,664 (1.92 MB)
+ Trainable params: 167,554 (654.51 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 335,110 (1.28 MB)
+
+----- Configuration -----
+Lead time (T): 24
+Predict time (P): 12
+LSTM Units: 64
+LSTM Layers: 3
+Teacher Forcing during training: False
+Epochs trained: 20
+
+----- Overall Performance Metrics -----
+Overall MSE: 0.0098
+Overall RMSE: 0.0988
+Overall MAE: 0.0546
+Overall R2 Score: 0.9666
+
+----- Performance Metrics by Horizon -----
+Horizon t+1 MSE: 0.0048
+Horizon t+1 RMSE: 0.0695
+Horizon t+1 MAE: 0.0429
+Horizon t+1 R2 Score: 0.9836
+Horizon t+2 MSE: 0.0044
+Horizon t+2 RMSE: 0.0661
+Horizon t+2 MAE: 0.0391
+Horizon t+2 R2 Score: 0.9851
+Horizon t+3 MSE: 0.0045
+Horizon t+3 RMSE: 0.0672
+Horizon t+3 MAE: 0.0395
+Horizon t+3 R2 Score: 0.9846
+Horizon t+4 MSE: 0.0050
+Horizon t+4 RMSE: 0.0707
+Horizon t+4 MAE: 0.0416
+Horizon t+4 R2 Score: 0.9830
+Horizon t+5 MSE: 0.0058
+Horizon t+5 RMSE: 0.0762
+Horizon t+5 MAE: 0.0444
+Horizon t+5 R2 Score: 0.9802
+Horizon t+6 MSE: 0.0070
+Horizon t+6 RMSE: 0.0838
+Horizon t+6 MAE: 0.0480
+Horizon t+6 R2 Score: 0.9760
+Horizon t+7 MSE: 0.0086
+Horizon t+7 RMSE: 0.0928
+Horizon t+7 MAE: 0.0522
+Horizon t+7 R2 Score: 0.9705
+Horizon t+8 MSE: 0.0106
+Horizon t+8 RMSE: 0.1029
+Horizon t+8 MAE: 0.0571
+Horizon t+8 R2 Score: 0.9638
+Horizon t+9 MSE: 0.0129
+Horizon t+9 RMSE: 0.1134
+Horizon t+9 MAE: 0.0627
+Horizon t+9 R2 Score: 0.9560
+Horizon t+10 MSE: 0.0153
+Horizon t+10 RMSE: 0.1237
+Horizon t+10 MAE: 0.0691
+Horizon t+10 R2 Score: 0.9476
+Horizon t+11 MSE: 0.0178
+Horizon t+11 RMSE: 0.1336
+Horizon t+11 MAE: 0.0759
+Horizon t+11 R2 Score: 0.9389
+Horizon t+12 MSE: 0.0204
+Horizon t+12 RMSE: 0.1429
+Horizon t+12 MAE: 0.0825
+Horizon t+12 R2 Score: 0.9301
+================================================================================
